@@ -17,6 +17,64 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
+/*--------------------------------------------------------------
+# Button
+--------------------------------------------------------------*/
+.custom-btn,
+.navbar .custom-btn {
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-bold);
+}
+
+.navbar .custom-btn {
+  background: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--white-color);
+  color: var(--white-color);
+  padding: 8px 22px;
+}
+
+.navbar .custom-btn:hover {
+  background: var(--white-color);
+  border-color: transparent;
+  color: var(--secondary-color);
+}
+
+.custom-btn {
+  background: var(--secondary-color);
+  border-radius: var(--border-radius-large);
+  color: var(--white-color);
+  font-weight: var(--font-weight-bold);
+  padding: 12px 24px;
+}
+
+.custom-btn:hover {
+  background: var(--primary-color);
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  color: var(--white-color);
+}
+
+.custom-border-btn {
+  background: transparent;
+  border: 2px solid var(--border-color);
+  color: var(--p-color);
+}
+
+.custom-border-btn:hover {
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--white-color);
+}
+
+.custom-link {
+	background-color: var(--primary-color);
+}
+
+.custom-link:hover {
+	background-color: var(--secondary-color);
+}
+
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -635,59 +693,56 @@ section {
   right: 15px;
 }
 
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details {
-  padding-top: 40px;
-}
-.portfolio-details .portfolio-details-slider img {
-  width: 100%;
-}
-.portfolio-details .portfolio-details-slider .swiper-pagination {
-  margin-top: 20px;
+/*---------------------------------------
+  PROJECTS              
+-----------------------------------------*/
+.projects-thumb {
+  background: var(--section-bg-color);
+  border: 2px solid var(--white-color);
+  border-radius: var(--border-radius-medium);
   position: relative;
+  overflow: hidden;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 40px;
+  transition: all ease 0.5s;
 }
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #0563bb;
+
+.projects-thumb:hover {
+  border-color: var(--secondary-color);
 }
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #0563bb;
+
+.projects-thumb:hover .projects-image,
+.projects-thumb:focus .projects-image {
+  transform: rotate(0) translateY(0);
 }
-.portfolio-details .portfolio-info {
-  padding: 30px;
-  box-shadow: 0px 0 30px rgba(69, 80, 91, 0.08);
+
+.projects-thumb .popup-image {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
+
+.projects-image {
+  border-radius: var(--border-radius-medium);
+  display: block;
+  width: 100%;
+  transform: rotate(10deg) translateY(80px);
+  transition: all ease 0.5s;
 }
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-.portfolio-details .portfolio-info ul li + li {
-  margin-top: 10px;
-}
-.portfolio-details .portfolio-description {
-  padding-top: 30px;
-}
-.portfolio-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
+
+.projects-title {
   margin-bottom: 20px;
 }
-.portfolio-details .portfolio-description p {
-  padding: 0;
+
+.projects-tag {
+  font-size: var(--menu-font-size);
+  font-weight: var(--font-weight-medium);
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  margin-bottom: 5px;
 }
+
 
 /*--------------------------------------------------------------
 # Services
